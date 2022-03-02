@@ -12,6 +12,6 @@ export class CommonService {
   }
 
   public submitData(data: any): void {
-    console.log('Gửi data lên server: Data:' + data);
+    console.log('Gửi data lên server: Data:', data);
   }
 }
