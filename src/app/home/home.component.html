@@ -1,0 +1,48 @@
+<div>
+    <h3>Đây là component Home</h3>
+    <h2>Chào bạn {{name | uppercase}}</h2>
+    <br/>
+    <!-- <table class="table">
+        <tr>
+            <th>TT</th>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Sale off</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay2; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ trai.ten | uppercase }}</td>
+            <td class="right">
+                <span [ngClass]="{ 'so-am': trai.gia < 0 }">{{ trai.gia | currency:'VND': 'symbol':'1.2' }}</span>
+            </td> 
+            <td>
+                <span>{{ trai.haGia | onSale | uppercase }}</span>
+            </td>
+        </tr>
+    </table> -->
+    Tỉnh/Thành phố:
+    <select id="city" (change)="changeCity($event)">
+        <option *ngFor="let data of vietNamData" value="{{ data.city }}">
+            {{ data.city }}
+        </option>
+    </select>
+    <br/>
+    Quận/Huyện:
+    <select id="district">
+        <option *ngFor="let district of districts" value="{{ district }}">
+            {{ district }}
+        </option>
+    </select>
+    <!-- <input type="text" [(ngModel)]="age"/>
+    <h3>Tuổi của bạn là {{ age }}</h3>
+    <div *ngIf="age <= 18; then young else old"></div>
+    <ng-template #young>You are young !</ng-template>
+    <ng-template #old>You are old !</ng-template> -->
+    <!-- *ngIf sử dụng như if - else
+    <h2 *ngIf="age > 18">Bạn quá già rồi</h2>
+    <h2 *ngIf="age <= 18">Bạn còn trẻ quá</h2> -->
+
+    <!-- <input type="text" [(ngModel)]="name"/>
+    <h2>Chào bạn {{name}}</h2>
+    <button (click)="resetName()">Reset tên</button> -->
+</div>

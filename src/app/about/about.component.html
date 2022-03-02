@@ -1,0 +1,13 @@
+<h2>Pick a highlight color</h2>
+<div>
+  <input type="radio" name="colors" (click)="changeColor(myColor='lightgreen')">Green
+  <input type="radio" name="colors" (click)="changeColor(myColor='yellow')">Yellow
+  <input type="radio" name="colors" (click)="changeColor(myColor='cyan')">Cyan
+</div>
+<p appHighLight>about works!</p>
+<p [appHighLight]="myColor">about works!</p>
+<p [appHighLight]="'green'">about works!</p>
+
+<span>Counter: {{ counter }}</span>
+<br/>
+<span>Counter ^ 2: {{ counterBP }}</span>
